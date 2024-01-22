@@ -61,12 +61,18 @@ To provide practical experience in managing Oracle 19c database users and passwo
 ### 7. Privileged User Changing Jessica's Password
 - **Step**: Log in as a user with the `ALTER USER` privilege.
 - **Command**: `alter user jessica identified by newpassword;`
+- Do the same for tom.  change his to fenago
 - **Explanation**: This command changes Jessica's password. Replace `newpassword` with the desired new password.
 
 ### 8. User Tom Changing His Own Password
 - **Step**: Log in as 'tom'.
+- `sqlplus tom/fenago@localhost:1521/orclpdb`
 - **Command**: `alter user tom identified by newpassword;`
 - **Explanation**: Tom can change his own password using this command. Again, replace `newpassword` with the new password.
+- This will fail until you add grant permissions to tom.
+- `sqlplus / as sysdba`
+- `GRANT CREATE SESSION to tom;`
+- `sqlplus tom/fenago@localhost:1521/orclpdb`
 
 ## Conclusion
 This lab guides students through the process of managing users and passwords in Oracle 19c using PowerShell and SQLPlus. The exercises cover various scenarios, including creating users with different password complexities, assigning quotas, and changing passwords.
