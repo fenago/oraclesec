@@ -7,6 +7,7 @@ Learn how to lock and unlock user accounts, expire user passwords, and create pr
 ## Prerequisites
 - Oracle 19c Database installed in a Windows environment.
 - Basic knowledge of SQL commands and Oracle database administration.
+- Make sure you go into orclpdb
 
 ## Part 1: Locking and Unlocking User Accounts
 
