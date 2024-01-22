@@ -71,6 +71,7 @@ To provide practical experience in managing Oracle 19c database users and passwo
 - **Explanation**: Tom can change his own password using this command. Again, replace `newpassword` with the new password.
 - This will fail until you add grant permissions to tom.
 - `sqlplus / as sysdba`
+- `alter session set container = orclpdb;`
 - `GRANT CREATE SESSION to tom;`
 - `sqlplus tom/fenago@localhost:1521/orclpdb`
 
