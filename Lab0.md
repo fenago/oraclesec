@@ -35,6 +35,8 @@ To provide practical experience in managing Oracle 19c database users and passwo
 ### 1. Use OS Authentication to Connect to the Database
 - **Command**: `sqlplus / as sysdba`
 - **Explanation**: Again, connect to the database using OS authentication with `SYSDBA` privileges.
+- Then switch your session to the pluggable database (PDB) named orclpdb
+`ALTER SESSION SET CONTAINER = orclpdb;`
 
 ### 2. Create User Jessica
 - **Command**: `create user jessica identified by fenago;`
@@ -71,4 +73,4 @@ This lab guides students through the process of managing users and passwords in 
 
 ---
 
-Adjust the lab content based on the level of your students and the specific requirements of your course. The default password 'fenago' is used throughout for consistency, but feel free to change it as needed for your lab environment.
+The default password 'fenago' is used throughout for consistency, but feel free to change it as needed for your lab environment.
