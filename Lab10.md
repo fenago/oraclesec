@@ -6,6 +6,8 @@
 ### Creating a Common User
 1. **Connect to the root container as a common user who has create user privilege granted commonly (for example, c##ernesto or system user):**
    ```sql
+   sqlplus / as sysdba
+
    SQL> connect c##ernesto@cdb1
    ```
 
