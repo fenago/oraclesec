@@ -31,7 +31,11 @@ Copy the contents from `C:\Users\Administrator\downloads\sample_schemas\` into `
 
 ### Step 6: Connect to the Database as SYSDBA
 Open PowerShell and connect to the database as SYSDBA.
-
+MAKE SURE YOU CD to :
+```
+cd c:\Oracle\Middleware\Oracle_Home\demo\schema\
+```
+then
 ```sql
 sqlplus / as sysdba
 ```
@@ -41,6 +45,7 @@ Connect to the database using the SYSTEM user.
 
 ```sql
 CONNECT system/fenago
+@mksample
 ```
 
 ### Additional Information
