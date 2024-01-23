@@ -37,7 +37,7 @@ SQL> alter user steve grant connect through appserver;
 Connect to the database using the proxy user credentials.
 
 ```sql
-SQL> connect appserver[steve]
+SQL> connect appserver[steve]@localhost:1521/orclpdb
 ```
 
 ### Step 6: Enter Password for the Proxy User
