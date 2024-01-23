@@ -7,20 +7,19 @@
 1. **Connect to the root container as a common user who has create user privilege granted commonly (for example, c##ernesto or system user):**
    ```sql
    sqlplus / as sysdba
-
+   SELECT name FROM v$database;
    SQL> connect c##ernesto@cdb1
    ```
 
 2. **Create a common user (for example, c##maja):**
    ```sql
-   c##ernesto@CDB1> create user c##maja identified by oracle1
-   container=all;
+   c##ernesto@CDB1> create user c##maja identified by oracle1 container=all;
    ```
 
 ### Creating a Local User
 1. **Connect to PDB (for example, pdb1) as a common user or local user who has create user privilege in that PDB (for example, c##ernesto or system user):**
    ```sql
-   SQL> connect c##ernesto@pdb1
+   SQL> connect c##ernesto@localhost:1521/orclpdb
    ```
 
 2. **Create a local user (for example, steve):**
@@ -32,7 +31,7 @@
 ### Creating a Common Role
 1. **Connect to the root container as a common user who has create role privilege granted commonly (for example, c##ernesto or system user):**
    ```sql
-   SQL> connect c##ernesto@cdb1
+   SQL> connect c##ernesto@localhost:1521/cdb1
    ```
 
 2. **Create a common role (for example, c##role1):**
