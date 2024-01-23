@@ -54,7 +54,7 @@ CONNECT system/fenago
 - Sample Schemas: hr, oe, pm, ix, sh, bi
 - Users: users
 - Temporary Tablespace: temp
-- Schema Directory: `C:\Oracle\Middleware\Oracle_Home\demo\schema\`
+- Schema Directory: `C:\Oracle\Middleware\Oracle_Home\demo\schema\logs\`
 - Database Connection: localhost:1521/orclpdb
 
 Follow these steps to successfully install and set up sample schemas in your Oracle 19c environment.
