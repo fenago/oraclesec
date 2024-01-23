@@ -9,6 +9,7 @@ The instructions for database authentication are as follows:
 1. **Connect to the database as sysdba (or another user that can grant the syskm privilege):**
    ```powershell
    sqlplus / as sysdba
+   ALTER SESSION SET CONTAINER = orclpdb;
    ```
 
 2. **Grant the syskm privilege to user Jessica:**
