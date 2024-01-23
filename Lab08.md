@@ -39,9 +39,4 @@ The result should include a table showing various users and their privileges. Lo
 | syskm    | FALSE | FALSE | FALSE | FALSE | FALSE | TRUE  | 0      |
 | tom      | FALSE | FALSE | FALSE | TRUE  | FALSE | FALSE | 0      |
 
-### Step 4: Test Connection Using RMAN
-Test the connection to the database using RMAN (Recovery Manager) as user `tom` with the `SYSBACKUP` privilege.
 
-```sql
-rman target '"tom/oracle_123 as sysbackup"'
-```
