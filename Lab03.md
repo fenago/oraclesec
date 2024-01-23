@@ -86,3 +86,12 @@ create user richard identified by oracle_2 default
 tablespace users temporary tablespace temp quota unlimited
 on users;
 ```
+
+### Step 7: Create a User with Specific Tablespaces and Quota
+Create a user `ernesto` with specified tablespaces and quota.
+
+```sql
+create user ernesto identified by oracle_2 default
+tablespace users temporary tablespace temp quota unlimited
+on users;
+```
