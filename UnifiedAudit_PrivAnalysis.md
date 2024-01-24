@@ -7,16 +7,9 @@ This guide provides a step-by-step approach to setting up a SQL*Plus environment
 
 To run SQL*Plus commands from PowerShell, you need to first set up the environment. This involves setting the Oracle environment variables and then launching SQL*Plus.
 
-```powershell
-# Set Oracle environment variables
-$env:ORACLE_HOME = "C:\path\to\your\oracle\installation"
-$env:PATH += ";$env:ORACLE_HOME\bin"
-
 # Launch SQL*Plus
 sqlplus / as sysdba
 ```
-
-Replace `C:\path\to\your\oracle\installation` with the actual path to your Oracle installation.
 
 ## Switching to the Pluggable Database (if required)
 
@@ -83,10 +76,10 @@ EXIT;
 Open PowerShell and log in to SQL*Plus as a user with DBA privileges.
 
 ```powershell
-sqlplus your_dba_username@orclpdb
+sqlplus your_dba_username@localhost:1521/orclpdb
 ```
 
-Replace `your_dba_username` with your DBA user name.
+Replace `your_dba_username` with your DBA user name.  (or use sysdba)
 
 ## Enabling Unified Audit in Mixed Mode
 
@@ -170,7 +163,7 @@ As user Jack, you will create a privilege analysis policy to determine which pri
 
 ```sql
 -- Connect as Jack
-CONNECT jack@orclpdb
+CONNECT jack@localhost:1521/orclpdb
 
 -- Create a privilege analysis policy
 BEGIN
@@ -199,7 +192,7 @@ Log in as Jill and perform some operations on the `HR.EMPLOYEES` table.
 
 ```sql
 -- Connect as Jill
-CONNECT jill@orclpdb
+CONNECT jill@localhost:1521/orclpdb
 
 -- Perform operations
 SELECT * FROM HR.EMPLOYEES;
@@ -212,7 +205,7 @@ Switch back to user Jack to generate the analysis report.
 
 ```sql
 -- Connect as Jack
-CONNECT jack@orclpdb
+CONNECT jack@localhost:1521/orclpdb
 
 -- Generate the results
 EXEC DBMS_PRIVILEGE_CAPTURE.GENERATE_RESULT ('emp_table_priv_analysis');
